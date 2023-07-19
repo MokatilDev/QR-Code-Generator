@@ -17,6 +17,90 @@
     --Color-Button: #7a7474;
     --Bg-Button: #1C1C1C;
     --Boder: #3E3E3E;
-    --Color-Basic: #7245FA;
-    --Boder-Basic: #7245fa69;
+    --Color-Basic: #8c00ff;
+    --Boder-Basic: #8c00ff50;
 }
+
+body{
+    background-color: var(--Color-main);
+    display: grid;
+    place-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-inline: 20px;
+    grid-template-columns: minmax(300px , 420px);
+}
+
+main{
+    background-color: var(--Bg-Button);
+    padding: 20px 20px;
+    border-radius: 7px;
+    border: 1px solid var(--Boder);
+}
+
+header h1{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+header p {
+    color: var(--Color-Button);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.inputButton{
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+}
+
+input{
+    padding: 12px 20px;
+    border-radius: 7px;
+    border: 1px solid var(--Boder);
+    font-size: 1.2rem;
+    background-color: var(--Bg-Button);
+}
+
+button{
+    background-color: var(--Color-Basic);
+    border-radius: 7px;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border: 1px solid var(--Color-Basic);
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+
+button.active{
+    border: 1px solid var(--Color-Basic);
+    background-color: var(--Boder-Basic);
+}
+
+
+.imgQR{
+    border: 1px solid var(--Boder);
+    display: grid;
+    margin-top: 10px;
+    border-radius: 7px;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.imgQR.active{
+    height: 210px;
+    padding: 20px 20px;
+}
+
+img{
+    width: 170px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+img.active{
+    opacity: 1;
+}
+
